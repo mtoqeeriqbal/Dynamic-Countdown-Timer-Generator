@@ -58,6 +58,6 @@ Users should ensure to include the generated script within the .countdown-contai
 
 ## Copyright & Version
 
-This web application is protected by copyright © [Your Name] [Year]. All rights reserved.
+This web application is protected by copyright © [M.Toqeer] [2024]. All rights reserved.
 
 Version 1.0
