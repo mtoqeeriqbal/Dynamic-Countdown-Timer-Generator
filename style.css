@@ -89,5 +89,5 @@ textarea {
     padding: 10px;
     border-radius: 5px;
     resize: none;
-    font-family: Consolas, monospace; /* Use monospaced font for code */
+    font-family: Consolas, monospace; 
 }
