@@ -6,14 +6,14 @@ function copyScript() {
 }
 
 
-function generateCountdownCode(hours) {
+function generateCountdownCode(hourss) {
     return `
     <script>
 
     (function () {
         // Unique storage key for each page
         function getDeadlineKey() {
-            return 'deadline_${hours}';
+            return 'deadline_${hourss}';
         }
     
         // Attempt to retrieve the deadline from localStorage
@@ -21,7 +21,7 @@ function generateCountdownCode(hours) {
         if (!deadline) {
             // If not found, set a new deadline 48 hours from now
             var currentTime = new Date();
-            var deadlineTime = new Date(currentTime.getTime() + ${hours} * 60 * 60 * 1000);
+            var deadlineTime = new Date(currentTime.getTime() + ${hourss} * 60 * 60 * 1000);
             deadline = deadlineTime.toISOString();
             localStorage.setItem(getDeadlineKey(), deadline);
         }
