@@ -55,3 +55,9 @@ Users should ensure to include the generated script within the .countdown-contai
 - HTML: Markup language for creating the structure of web pages.
 - CSS: Stylesheet language used for styling HTML elements.
 - JavaScript: Programming language used for adding interactivity and functionality to web pages.
+
+## Copyright & Version
+
+This web application is protected by copyright © [Your Name] [Year]. All rights reserved.
+
+Version 1.0
