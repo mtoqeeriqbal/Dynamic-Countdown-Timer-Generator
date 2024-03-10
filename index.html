@@ -6,6 +6,8 @@
     <title>Dynamic Countdown Timer Generator
     </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+
 <body>
     <div class="container">
         <div class="form-container">
@@ -16,11 +18,11 @@
                 <button type="submit">Generate Script</button>
             </form>
         </div>
-        <div class="script-container">
-            <h2>Generated Script</h2>
+        <div class="script-container" id="script-container" style="display: none;">
+            <h2 style="color: white;">Generated Script</h2>
             <div class="code-snippet">
-                <div class="copy-btn" onclick="copyScript()">Copy</div>
-                <textarea id="generatedScript" readonly></textarea>
+                <button class="copy-btn" onclick="copyScript()">Copy</button>
+                <pre><code class="language-js" id="generatedScript"></code></pre>
             </div>
         </div> <br>
         <div style="text-align:center;">This web application is protected by copyright © M.Toqeer 2024. All rights reserved.
@@ -28,5 +30,10 @@
         <div style="text-align:center;">Version 1.0</div>
     </div>
     <script src="script.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
 </body>
 </html>

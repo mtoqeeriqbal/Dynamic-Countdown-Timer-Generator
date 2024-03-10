@@ -6,13 +6,37 @@ body {
 }
 
 .container {
-    width: 700px;
-    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Adjusted for better spacing on smaller screens */
+    width: 90%; /* Default to a wider width on smaller screens */
 }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        width: 75%; /* Slightly reduce width for tablets */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 60%; /* Further reduce width for desktops */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 50%; /* Target width for large desktops */
+        margin: 50px auto; /* Increased margin for more vertical space on large screens */
+    }
+}
+
+
 
 h2 {
     margin-top: 0;
@@ -86,7 +110,6 @@ textarea {
     border: none;
     background-color: black;
     color: #00ff00; /* Change text color as needed */
-    padding: 10px;
     border-radius: 5px;
     resize: none;
     font-family: Consolas, monospace; 
