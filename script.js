@@ -7,13 +7,13 @@ function copyScript() {
 }
 
 // Function to generate countdown timer script
-function generateCountdownCode(hours) {
+function generateCountdownCode(hours, pageName) {
     return `
 <script>
 (function () {
     // Unique storage key for each page
     function getDeadlineKey() {
-        return 'deadline_${hours}';
+        return 'deadline_${hours}_${pageName}';
     }
 
     // Attempt to retrieve the deadline from localStorage
@@ -75,8 +75,8 @@ function generateCountdownCode(hours) {
 }
 
 // Function to display the generated script and apply syntax highlighting
-function displayScriptAndHighlight(hours) {
-    const script = generateCountdownCode(hours);
+function displayScriptAndHighlight(hours, pageName) {
+    const script = generateCountdownCode(hours, pageName);
     const scriptElement = document.getElementById('generatedScript');
     scriptElement.textContent = script; // Update the script text
 
@@ -94,7 +94,8 @@ function displayScriptAndHighlight(hours) {
 document.getElementById('timerForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const hours = document.getElementById('countdownLength').value;
-    displayScriptAndHighlight(hours);
+    const pageName = document.getElementById('pageName').value;
+    displayScriptAndHighlight(hours, pageName);
     const codeSnippet = document.getElementById('script-container');
     codeSnippet.style.display = 'block';
 });
